@@ -1,6 +1,5 @@
 /* Enter your solutions in this file */
 #include <stdio.h>
-#include<math.h>
 
 int max(int arr[], int n) {
   int maximum=arr[0];
@@ -79,12 +78,13 @@ int max(int arr[], int n) {
                arr[count] = i;
                 count++;
                 n = n/i;
-                }
-               
-                }
                 break;
+            }
+       }
   }
   return count;
   }
   
+
+
 
