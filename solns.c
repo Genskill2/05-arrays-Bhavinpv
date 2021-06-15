@@ -81,7 +81,7 @@ int max(int arr[], int n) {
    arr[i] = 2;
    }
    
-   for( int i=3 ; i< pow(n,0.5) ; i+2) {
+   for( int i=3 ; i<=sqrt(n) ; i+2) {
     int count_2=0;
     while(n % i ==0) {
     count_2 +=1;
