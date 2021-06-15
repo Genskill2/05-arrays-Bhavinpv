@@ -70,38 +70,20 @@ int max(int arr[], int n) {
   
   
   
-  int factors(int n , int arr[]) {
-   int count_1=0;
-  int count;
-   while(n% 2 == 0) {
-   count_1 +=1;
-   n=n/2 ;  
-   }
-   for(int i=0; i<count_1;i++) {
-   arr[i] = 2;
-   }
-   count=count_1;
-   for( int i=3 ; i< pow(n,0.5) ; i+2) {
-    int count_2=0;
-    while(n % i ==0) {
-    count_2 +=1;
-    n= n/i ;
-    }
-    
-    count += count_2;
-    
-     for(int j=0; j<count_2;j++) {
-   arr[count- count_2+j] = i;
-    }
-     
-   }
-   
-     if (n > 2) {
-        arr[count] = n;
-        }
+ int factors(int n , int arr[]) {
+  int count=0;
+   while (n !=1) {
 
- 
-    return count;
-   }
-    
-     
+     for (int i =2; i<=n ; i++){
+           if (n%i ==0) {
+               arr[count] = i;
+                count++;
+                n = n/i;
+                }
+               
+                }
+                break;
+  }
+  return count;
+  }
+  
